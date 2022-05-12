@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <script src="https://kit.fontawesome.com/5ba9eaeb16.js" crossorigin="anonymous"></script>
+        <title>Fortune Teller</title>
+        <style>
+            .perspective {
+                display: flex;
+                justify-content: center;
+                position: relative;
+                perspective: 800px;
+            }
+
+            .input-radio {
+                appearance: none;
+            }
+
+            .btn:focus-visible {
+                outline: dotted 1px;
+                outline-offset: -3px;
+            }
+
+            .input-radio:focus-visible {
+                outline: dotted 2px;
+                outline-offset: -1px;
+            }
+        </style>
+    </head>
+    <body>
+        <button class="btn secondary ripple dark" id="config"><span class="fa-solid fa-gear"></span> Settings</button>
+        <h1 class="text-center">Fortune Teller</h1>
+
+        <div class="flex">
+            <form class="form-control box" id="fortune-form">
+                <div class="input-group">
+                    <label class="input-label">What is your name? </label>
+                    <input required class="input-field name" placeholder="e.g., Andy, Carlos, Daisy, Issac">
+                </div>
+                <div class="input-group">
+                    <label class="input-label">What is your age?</label>
+                    <input required class="input-field age" type="number">
+                </div>
+                <div class="input-group">
+                    <label class="input-label">Dogs or Cats?</label>
+                    <input required class="input-radio" type="radio" name="animal" value="dog">
+                    <label>Dogs</label>
+                    <input required class="input-radio" type="radio" name="animal" value="cat">
+                    <label>Cats</label>
+                </div>
+
+                <div class="input-group">
+                    <label class="input-label">Is water wet?</label>
+                    <input required class="input-radio" type="radio" name="water" value="yes">
+                    <label>Yes</label>
+                    <input required class="input-radio" type="radio" name="water" value="no">
+                    <label>No</label>
+                </div>
+
+                <div class="input-group">
+                    <label class="input-label">Favorite Food?</label>
+                    <input required class="input-field favFood" placeholder="e.g., Pizza, Salad, Tacos Dorados">
+                </div>
+
+                <div class="input-group">
+                    <span class="perspective">
+                        <button class="btn ripple submit" type="submit">
+                            <span class="fa-solid fa-clock"></span><br>Predict My Future
+                        </button>
+                    </span>
+                </div>
+            </form>
+        </div>
+
+        <div class="modal config">
+            <div class="box hidden">
+                <button class="btn ripple" id="config-close">
+                	Close <span class="fa-solid fa-xmark"></span>
+                </button>
+                <form class="form-control">
+                    <div id="google_translate_element"></div>
+                </form>
+            </div>
+        </div>
+
+        <div class="future box flex">
+            <h1></h1>
+        </div>
+    </body>
+</html>
