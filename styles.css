@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
+
+body {
+    background: #f2dbff;
+    color: #8c1ec9;
+    font-family: Segoe UI, Frutiger, Frutiger Linotype, Dejavu Sans, Helvetica Neue, Arial, sans-serif;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.flex {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+.box {
+    background-color: #fff;
+    padding: 16px 20px;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+}
+
+.input-group {
+    padding: .5rem 0;
+}
+
+.input-field,
+.btn {
+    font-family: Segoe UI, Frutiger, Frutiger Linotype, Dejavu Sans, Helvetica Neue, Arial, sans-serif;
+}
+
+.input-field {
+    background-color: #fff;
+    border: solid 2px #eecfff;
+    padding: .5rem;
+    transition: 0.2s;
+}
+
+.input-label {
+	padding-right: 10px;
+}
+
+.input-field:focus {
+    outline: 0;
+    border: solid 2px #8c1ec9;
+}
+
+.input-radio {
+    background-color: #eecfff;
+    border: solid 4px #eecfff;
+    padding: 3px;
+    border-radius: 50%;
+}
+
+.input-radio:checked {
+    background-color: #fff;
+    border: solid 4px #8c1ec9;
+}
+
+.btn {
+    background-color: #8c1ec9;
+    border: solid 2px #8c1ec9;
+    color: #fff;
+    padding: .5rem;
+    transition: background-color 0.1s;
+    transition: transform 0.05s;
+}
+
+.btn:active {
+    transform: scale(0.9);
+}
+
+.btn:focus {
+    background-color: #6800a2;
+    border: solid 2px #6800a2;
+}
+
+.btn:disabled {
+    background-color: #eecfff;
+    color: #caa4de;
+}
+
+.btn.secondary {
+    background-color: #fefefe;
+    border: solid 2px #eaeaea;
+    color: #000;
+}
+
+.ripple {
+    position: relative;
+    overflow: hidden !important;
+}
+
+._ripple {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: 50%;
+    animation: ripple forwards ease-out 2s;
+}
+
+.ripple.dark>._ripple {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+@keyframes ripple {
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(3);
+        opacity: 0;
+    }
+}
+
+.load {
+    border: 0.15rem solid transparent;
+    border-top: 0.15rem solid #fff;
+    border-radius: 50%;
+    width: 1rem;
+    height: 1rem;
+    animation: spin .15s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.hidden {
+    display: none;
+}
+
+.modal {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
